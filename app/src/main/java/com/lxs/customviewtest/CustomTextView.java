@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
@@ -20,6 +21,8 @@ public class CustomTextView extends TextView {
         super(context, attrs);
         mPaint1 = new Paint();
         mPaint1.setColor(Color.BLUE);
+        getResources().getColor(R.color.colorAccent);//过时
+        ContextCompat.getColor(context,R.color.colorAccent);//替代
         mPaint1.setStyle(Paint.Style.FILL);
 
         mPaint2 = new Paint();
